@@ -3,10 +3,8 @@ package org.acme.retail;
 import java.util.HashMap;
 import java.util.Map;
 import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
 
 import io.vertx.core.json.JsonObject;
-import org.apache.camel.CamelContext;
 import org.apache.camel.LoggingLevel;
 import org.apache.camel.Message;
 import org.apache.camel.builder.RouteBuilder;
@@ -14,10 +12,7 @@ import org.apache.camel.component.elasticsearch.ElasticsearchConstants;
 import org.elasticsearch.action.index.IndexRequest;
 
 @ApplicationScoped
-public class Routes extends RouteBuilder {
-
-    @Inject
-    CamelContext context;
+public class ProductRoute extends RouteBuilder {
 
     @SuppressWarnings({"unchecked"})
     @Override

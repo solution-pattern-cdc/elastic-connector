@@ -15,6 +15,7 @@
     <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
     <quarkus.platform.version>2.7.5.Final</quarkus.platform.version>
     <camel-quarkus.version>2.7.0</camel-quarkus.version>
+    <camel.version>3.14.1</camel.version>
     <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
   </properties>
   <dependencyManagement>
@@ -53,10 +54,6 @@
       <artifactId>camel-quarkus-elasticsearch-rest</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.apache.camel.quarkus</groupId>
-      <artifactId>camel-quarkus-seda</artifactId>
-    </dependency>
-    <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-jackson</artifactId>
     </dependency>
@@ -68,6 +65,12 @@
     <dependency>
       <groupId>io.rest-assured</groupId>
       <artifactId>rest-assured</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.camel</groupId>
+      <artifactId>camel-test-junit5</artifactId>
+      <version>${camel.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
